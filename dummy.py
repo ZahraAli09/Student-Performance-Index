@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Request
-import pickle
+import joblib
 
 app=FastAPI()
 
 file=open('performance.pkl', 'rb')
-model=pickle.load(file)
+model=joblib.load(file)
 
 #creating an API
 @app.get('/')
