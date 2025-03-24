@@ -1,9 +1,9 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 file=open('performance.pkl', 'rb')
-model=pickle.load(file)
+model=joblib.load(file)
 st.title("Welcome Students !! Get your performance index ")
 
 hrs=st.number_input('hours_studied')
